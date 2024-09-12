@@ -1,0 +1,25 @@
+{
+    "timestamp": 1726131266,
+    "results": [
+        {
+            "ip": "8.8.8.8",
+            "status": "successful",
+            "output": "\nPinging 8.8.8.8 with 32 bytes of data:\nReply from 8.8.8.8: bytes=32 time=31ms TTL=112\nReply from 8.8.8.8: bytes=32 time=30ms TTL=112\nReply from 8.8.8.8: bytes=32 time=31ms TTL=112\nReply from 8.8.8.8: bytes=32 time=31ms TTL=112\n\nPing statistics for 8.8.8.8:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 30ms, Maximum = 31ms, Average = 30ms"
+        },
+        {
+            "ip": "1.1.1.1",
+            "status": "successful",
+            "output": "\nPinging 1.1.1.1 with 32 bytes of data:\nReply from 1.1.1.1: bytes=32 time=18ms TTL=54\nReply from 1.1.1.1: bytes=32 time=20ms TTL=54\nReply from 1.1.1.1: bytes=32 time=19ms TTL=54\nReply from 1.1.1.1: bytes=32 time=19ms TTL=54\n\nPing statistics for 1.1.1.1:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 18ms, Maximum = 20ms, Average = 19ms"
+        },
+        {
+            "ip": "192.168.1.1",
+            "status": "successful",
+            "output": "\nPinging 192.168.1.1 with 32 bytes of data:\nReply from 192.168.1.1: bytes=32 time=2ms TTL=61\nReply from 192.168.1.1: bytes=32 time=3ms TTL=61\nReply from 192.168.1.1: bytes=32 time=3ms TTL=61\nReply from 192.168.1.1: bytes=32 time=4ms TTL=61\n\nPing statistics for 192.168.1.1:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 2ms, Maximum = 4ms, Average = 3ms"
+        },
+        {
+            "ip": "10.19.20.30",
+            "status": "failed",
+            "output": "\nPinging 10.19.20.30 with 32 bytes of data:\nRequest timed out.\nRequest timed out.\nRequest timed out.\nRequest timed out.\n\nPing statistics for 10.19.20.30:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),"
+        }
+    ]
+}

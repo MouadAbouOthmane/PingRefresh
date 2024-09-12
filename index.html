@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ping Results</title>
+  </head>
+  <body>
+    <h1>Ping Results</h1>
+    <div id="ping-results"></div>
+
+    <script>
+      // Function to fetch ping results from the server
+      function fetchPingResults() {
+        fetch("ping_script.php") // Replace with the actual path to your PHP script
+          .then((response) => response.json()) // Parse JSON from the response
+          .then((data) => {
+            // Clear the existing results
+            const resultsDiv = document.getElementById("ping-results");
+            resultsDiv.innerHTML = "";
+
+            // Loop through the results and display them
+            data.results.forEach((result) => {
+              const resultHtml = `
+                    <div>
+                        <h2>IP: ${result.ip}</h2>
+                        <p>Status: ${result.status}</p>
+                        <pre>Output:\n${result.output}</pre>
+                    </div>
+                `;
+              resultsDiv.innerHTML += resultHtml;
+            });
+          })
+          .catch((error) => {
+            console.error("Error fetching ping results:", error);
+          });
+      }
+
+      // Fetch results immediately when the page loads
+      fetchPingResults();
+
+      // Set an interval to fetch the results every 10 seconds (10000 milliseconds)
+      setInterval(fetchPingResults, 10000);
+    </script>
+  </body>
+</html>
